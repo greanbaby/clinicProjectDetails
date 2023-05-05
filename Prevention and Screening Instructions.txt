@@ -1,0 +1,39 @@
+0) Denominators (all those in are ranges from panels)
+1) Remove those set to NEVER remind from the denominators (e.g. those with hysterectomy remove from denominator; any NEVER remind patients)
+2) Calculate the % done based on the "Prevention and Screening Instructions"
+3) Use the Measurements query in Juno to find the SCREENING OFFER items
+4) Use the Preventions Refused query in Juno to find offers of care by REFUSED
+
+
+Prevention and Screening Instructions
+RBT (Report by Template) details for The Associate Clinic, Pincher Creek Dec. 23 2022
+Panel – By Age 18-118
+Use Panel – By Age and specify 18-118.
+
+Juno Report by Templates Used to Generate Numerator and Denominator Lists
+•	CRC Screening Due
+•	Mammo Due
+•	Pap Screening Due
+•	Measurements Done (BP, EXE, SMK, WT–3yrs, HT) and HT added to previous HT to look for it EVER being done
+
+Query By Example for NEVER_REMIND Patients to be Removed from CRC, Pap, Mammo Denominators
+•	select demographic_no, prevention_type from preventions where never > 0
+
+Denominators File List
+Pts_Age_18_to_118.xlsx
+CRC-Age_50-74_Not_In_Never_Remind_Preventions_List.xlsx
+MAM-Females_50-74_Not_In_Never_Remind_Preventions_List.xlsx
+PAP-Females_25-69_Not_In_Never_Remind_Preventions_List.xlsx
+
+Numerators File List
+CRC-COMPLETED-pts_not_in_emr_due_list.xlsx
+MAM-COMPLETED-pts_not_in_emr_due_list.xlsx
+PAP-COMPLETED-pts_not_in_emr_due_list.xlsx
+Pts_Age_18_to_118 - With BP Done Past Year.xlsx
+Pts_Age_18_to_118 - With EXE Done Past Year.xlsx
+Pts_Age_18_to_118 - With HT Done.xlsx
+Pts_Age_18_to_118 - With SMK Done Past Year.xlsx
+Pts_Age_18_to_118 - With WT Done Past 3 Years.xlsx
+
+
+
