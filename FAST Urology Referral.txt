@@ -214,118 +214,115 @@
 <div id="page_1" class="page_container ui-droppable" style="width: 850px; height: 1100px;">
 <img id="gen_backgroundImage1" class="gen-layer1" src="${oscar_image_path}FAST Urology Referral.png" style="width: 100%; height: auto; z-index: 0;">
 <div class="input_elements">
-<div id="gen_widgetId1" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 157px; height: 16px; position: absolute; z-index: 9; top: 38.5667px; left: 498.883px;">
+<div id="gen_widgetId1" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 157px; height: 16px; position: absolute; z-index: 11; top: 38.5667px; left: 498.883px;">
 <input type="text" class="gen_input noborderPrint" oscardb="patient_nameL" id="gen_inputId1" name="gen_inputId1">
 </div>
-<div id="gen_widgetId2" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 165px; height: 16px; position: absolute; z-index: 10; top: 38.5667px; left: 656.883px;">
+<div id="gen_widgetId2" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 165px; height: 16px; position: absolute; z-index: 12; top: 38.5667px; left: 656.883px;">
 <input type="text" class="gen_input noborderPrint" oscardb="patient_nameF" id="gen_inputId2" name="gen_inputId2">
 </div>
-<div id="gen_widgetId3" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 141px; height: 16px; position: absolute; z-index: 11; top: 75.5667px; left: 680.883px;">
+<div id="gen_widgetId3" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 141px; height: 16px; position: absolute; z-index: 13; top: 75.5667px; left: 680.883px;">
 <input type="text" class="gen_input noborderPrint" oscardb="dobc2" id="gen_inputId3" name="gen_inputId3">
 </div>
-<div id="gen_widgetId4" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 13; top: 62.7833px; left: 590.883px;">
+<div id="gen_widgetId4" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 15; top: 62.7833px; left: 590.883px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 7px;" id="gen_inputId4" name="gen_inputId4">
 </div>
-<div id="gen_widgetId5" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 12; top: 62.7833px; left: 623.883px;">
+<div id="gen_widgetId5" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 14; top: 62.7833px; left: 623.883px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 7px;" id="gen_inputId5" name="gen_inputId5">
 </div>
-<div id="gen_widgetId6" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 14; top: 99.7833px; left: 635.883px;">
+<div id="gen_widgetId6" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 9px; height: 9px; position: absolute; z-index: 16; top: 99.7833px; left: 635.883px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 7px;" id="gen_inputId6" name="gen_inputId6" value="X">
 </div>
-<div id="gen_widgetId7" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 177px; height: 16px; position: absolute; z-index: 15; top: 75.5667px; left: 498.883px;">
+<div id="gen_widgetId7" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 177px; height: 16px; position: absolute; z-index: 17; top: 75.5667px; left: 498.883px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId7" name="gen_inputId7">
 </div>
-<div id="gen_widgetId8" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 107px; height: 16px; position: absolute; z-index: 16; top: 112.567px; left: 498.883px;">
+<div id="gen_widgetId8" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 107px; height: 16px; position: absolute; z-index: 18; top: 112.567px; left: 498.883px;">
 <input type="text" class="gen_input noborderPrint" oscardb="hin" id="gen_inputId8" name="gen_inputId8">
 </div>
-<div id="gen_widgetId9" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 103px; height: 16px; position: absolute; z-index: 17; top: 112.567px; left: 607.883px;">
+<div id="gen_widgetId9" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 103px; height: 16px; position: absolute; z-index: 19; top: 112.567px; left: 607.883px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId9" name="gen_inputId9">
 </div>
-<div id="gen_widgetId10" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 108px; height: 16px; position: absolute; z-index: 18; top: 112.567px; left: 713.883px;">
+<div id="gen_widgetId10" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 108px; height: 16px; position: absolute; z-index: 20; top: 112.567px; left: 713.883px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId10" name="gen_inputId10">
 </div>
-<div id="gen_widgetId11" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 19; top: 134.533px; left: 630.533px;">
+<div id="gen_widgetId11" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 21; top: 134.533px; left: 630.533px;">
 <input type="text" class="gen_input xBox gender_precheck_M" autocomplete="off" style="font-size: 9px;" id="gen_inputId11" name="gen_inputId11">
 </div>
-<div id="gen_widgetId12" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 20; top: 134.533px; left: 714.533px;">
+<div id="gen_widgetId12" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 22; top: 134.533px; left: 714.533px;">
 <input type="text" class="gen_input xBox gender_precheck_F" autocomplete="off" style="font-size: 9px;" id="gen_inputId12" name="gen_inputId12">
 </div>
-<div id="gen_widgetId13" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 21; top: 148.533px; left: 714.533px;">
+<div id="gen_widgetId13" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 23; top: 148.533px; left: 714.533px;">
 <input type="text" class="gen_input xBox gender_precheck_U" autocomplete="off" style="font-size: 9px;" id="gen_inputId13" name="gen_inputId13">
 </div>
-<div id="gen_widgetId14" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 22; top: 149.533px; left: 500.533px;">
+<div id="gen_widgetId14" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 12px; height: 12px; position: absolute; z-index: 24; top: 149.533px; left: 500.533px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 9px;" id="gen_inputId14" name="gen_inputId14">
 </div>
-<div id="gen_widgetId15" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 196px; height: 16px; position: absolute; z-index: 23; top: 255.667px; left: 26.5333px;">
+<div id="gen_widgetId15" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 196px; height: 16px; position: absolute; z-index: 25; top: 255.667px; left: 26.5333px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId15" name="gen_inputId15">
 </div>
-<div id="gen_widgetId16" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 197px; height: 16px; position: absolute; z-index: 24; top: 255.667px; left: 226.533px;">
+<div id="gen_widgetId16" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 197px; height: 16px; position: absolute; z-index: 26; top: 255.667px; left: 226.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="phone" id="gen_inputId16" name="gen_inputId16">
 </div>
-<div id="gen_widgetId17" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 397px; height: 16px; position: absolute; z-index: 25; top: 255.667px; left: 426.533px;">
+<div id="gen_widgetId17" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 397px; height: 16px; position: absolute; z-index: 27; top: 255.667px; left: 426.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="addressline" id="gen_inputId17" name="gen_inputId17">
 </div>
-<div id="gen_widgetId18" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 294px; height: 16px; position: absolute; z-index: 26; top: 300.667px; left: 27.5333px;">
+<div id="gen_widgetId18" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 294px; height: 16px; position: absolute; z-index: 28; top: 300.667px; left: 27.5333px;">
 <input type="text" class="gen_input noborderPrint" oscardb="doctor" id="gen_inputId18" name="gen_inputId18">
 </div>
-<div id="gen_widgetId19" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 149px; height: 16px; position: absolute; z-index: 27; top: 300.667px; left: 326.533px;">
+<div id="gen_widgetId19" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 149px; height: 16px; position: absolute; z-index: 29; top: 300.667px; left: 326.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="clinic_phone" id="gen_inputId19" name="gen_inputId19">
 </div>
-<div id="gen_widgetId20" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 149px; height: 16px; position: absolute; z-index: 28; top: 300.667px; left: 478.533px;">
+<div id="gen_widgetId20" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 149px; height: 16px; position: absolute; z-index: 30; top: 300.667px; left: 478.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="clinic_fax" id="gen_inputId20" name="gen_inputId20">
 </div>
-<div id="gen_widgetId21" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 448px; height: 16px; position: absolute; z-index: 29; top: 344.667px; left: 26.5333px;">
+<div id="gen_widgetId21" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 448px; height: 16px; position: absolute; z-index: 31; top: 344.667px; left: 26.5333px;">
 <input type="text" class="gen_input noborderPrint" oscardb="clinic_addressLineFull" id="gen_inputId21" name="gen_inputId21">
 </div>
-<div id="gen_widgetId22" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 344px; height: 16px; position: absolute; z-index: 30; top: 344.667px; left: 478.533px;">
+<div id="gen_widgetId22" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 344px; height: 16px; position: absolute; z-index: 32; top: 344.667px; left: 478.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId22" name="gen_inputId22">
 </div>
-<div id="gen_widgetId23" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 191px; height: 16px; position: absolute; z-index: 31; top: 300.667px; left: 630.533px;">
-<input type="text" class="gen_input noborderPrint" id="gen_inputId23" name="gen_inputId23">
-</div>
-<div id="gen_widgetId24" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 295px; height: 16px; position: absolute; z-index: 32; top: 388.667px; left: 27.5333px;">
+<div id="gen_widgetId24" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 295px; height: 16px; position: absolute; z-index: 33; top: 388.667px; left: 27.5333px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId24" name="gen_inputId24">
 </div>
-<div id="gen_widgetId25" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 148px; height: 16px; position: absolute; z-index: 33; top: 388.667px; left: 327.533px;">
+<div id="gen_widgetId25" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 148px; height: 16px; position: absolute; z-index: 34; top: 388.667px; left: 327.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId25" name="gen_inputId25">
 </div>
-<div id="gen_widgetId26" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 344px; height: 16px; position: absolute; z-index: 34; top: 388.667px; left: 478.533px;">
+<div id="gen_widgetId26" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 344px; height: 16px; position: absolute; z-index: 35; top: 388.667px; left: 478.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId26" name="gen_inputId26">
 </div>
-<div id="gen_widgetId27" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 35; top: 429.033px; left: 31px;">
+<div id="gen_widgetId27" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 36; top: 429.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId27" name="gen_inputId27">
 </div>
-<div id="gen_widgetId28" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 36; top: 429.033px; left: 369.533px;">
+<div id="gen_widgetId28" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 37; top: 429.033px; left: 369.533px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId28" name="gen_inputId28">
 </div>
-<div id="gen_widgetId29" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 283px; height: 16px; position: absolute; z-index: 37; top: 427.167px; left: 505.533px;">
+<div id="gen_widgetId29" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 283px; height: 16px; position: absolute; z-index: 38; top: 427.167px; left: 505.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId29" name="gen_inputId29">
 </div>
-<div id="gen_widgetId30" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 38; top: 451.033px; left: 31px;">
+<div id="gen_widgetId30" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 39; top: 451.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId30" name="gen_inputId30">
 </div>
-<div id="gen_widgetId31" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 342px; height: 16px; position: absolute; z-index: 39; top: 449.167px; left: 188.533px;">
+<div id="gen_widgetId31" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 342px; height: 16px; position: absolute; z-index: 40; top: 449.167px; left: 188.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId31" name="gen_inputId31">
 </div>
-<div id="gen_widgetId32" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 40; top: 474.033px; left: 31px;">
+<div id="gen_widgetId32" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 41; top: 474.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId32" name="gen_inputId32">
 </div>
-<div id="gen_widgetId33" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 341px; height: 16px; position: absolute; z-index: 41; top: 471.167px; left: 310.533px;">
+<div id="gen_widgetId33" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 341px; height: 16px; position: absolute; z-index: 42; top: 471.167px; left: 310.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId33" name="gen_inputId33">
 </div>
-<div id="gen_widgetId34" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 42; top: 496.033px; left: 31px;">
+<div id="gen_widgetId34" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 43; top: 496.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId34" name="gen_inputId34">
 </div>
-<div id="gen_widgetId35" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 43; top: 536.033px; left: 31px;">
+<div id="gen_widgetId35" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 44; top: 536.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId35" name="gen_inputId35">
 </div>
-<div id="gen_widgetId36" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 44; top: 581.033px; left: 31px;">
+<div id="gen_widgetId36" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 45; top: 581.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId36" name="gen_inputId36">
 </div>
-<div id="gen_widgetId37" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 45; top: 603.033px; left: 31px;">
+<div id="gen_widgetId37" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 46; top: 603.033px; left: 31px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId37" name="gen_inputId37">
 </div>
-<div id="gen_widgetId38" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 267px; height: 16px; position: absolute; z-index: 46; top: 578.167px; left: 386.533px;">
+<div id="gen_widgetId38" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 267px; height: 16px; position: absolute; z-index: 47; top: 578.167px; left: 386.533px;">
 <input type="text" class="gen_input noborderPrint" id="gen_inputId38" name="gen_inputId38">
 </div>
 <div id="gen_widgetId39" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 116px; height: 16px; position: absolute; z-index: 48; top: 578.167px; left: 700.533px;">
@@ -386,68 +383,71 @@
 <textarea style="resize: none;" class="gen_input noborderPrint" id="gen_inputId57" name="gen_inputId57">
 </textarea>
 </div>
-<div id="gen_widgetId58" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 68; top: 666.283px; left: 431px;">
+<div id="gen_widgetId58" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 67; top: 666.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId58" name="gen_inputId58">
 </div>
-<div id="gen_widgetId59" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 69; top: 683.283px; left: 431px;">
+<div id="gen_widgetId59" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 68; top: 683.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId59" name="gen_inputId59">
 </div>
-<div id="gen_widgetId60" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 70; top: 701.283px; left: 431px;">
+<div id="gen_widgetId60" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 69; top: 701.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId60" name="gen_inputId60">
 </div>
-<div id="gen_widgetId61" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 71; top: 718.283px; left: 431px;">
+<div id="gen_widgetId61" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 70; top: 718.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId61" name="gen_inputId61">
 </div>
-<div id="gen_widgetId62" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 72; top: 755.283px; left: 431px;">
+<div id="gen_widgetId62" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 71; top: 755.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId62" name="gen_inputId62">
 </div>
-<div id="gen_widgetId63" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 73; top: 774.283px; left: 431px;">
+<div id="gen_widgetId63" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 72; top: 774.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId63" name="gen_inputId63">
 </div>
-<div id="gen_widgetId64" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 74; top: 792.283px; left: 431px;">
+<div id="gen_widgetId64" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 73; top: 792.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId64" name="gen_inputId64">
 </div>
-<div id="gen_widgetId65" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 75; top: 810.283px; left: 431px;">
+<div id="gen_widgetId65" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 74; top: 810.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId65" name="gen_inputId65">
 </div>
-<div id="gen_widgetId66" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 76; top: 828.283px; left: 431px;">
+<div id="gen_widgetId66" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 75; top: 828.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId66" name="gen_inputId66">
 </div>
-<div id="gen_widgetId67" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 77; top: 846.283px; left: 431px;">
+<div id="gen_widgetId67" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 76; top: 846.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId67" name="gen_inputId67">
 </div>
-<div id="gen_widgetId68" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 78; top: 865.283px; left: 431px;">
+<div id="gen_widgetId68" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 77; top: 865.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId68" name="gen_inputId68">
 </div>
-<div id="gen_widgetId69" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 79; top: 883.283px; left: 431px;">
+<div id="gen_widgetId69" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 78; top: 883.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId69" name="gen_inputId69">
 </div>
-<div id="gen_widgetId70" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 80; top: 900.283px; left: 431px;">
+<div id="gen_widgetId70" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 79; top: 900.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId70" name="gen_inputId70">
 </div>
-<div id="gen_widgetId71" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 81; top: 918.283px; left: 431px;">
+<div id="gen_widgetId71" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 80; top: 918.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId71" name="gen_inputId71">
 </div>
-<div id="gen_widgetId72" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 82; top: 936.283px; left: 431px;">
+<div id="gen_widgetId72" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 81; top: 936.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId72" name="gen_inputId72">
 </div>
-<div id="gen_widgetId73" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 83; top: 955.283px; left: 431px;">
+<div id="gen_widgetId73" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 82; top: 955.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId73" name="gen_inputId73">
 </div>
-<div id="gen_widgetId74" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 84; top: 972.283px; left: 431px;">
+<div id="gen_widgetId74" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 83; top: 972.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId74" name="gen_inputId74">
 </div>
-<div id="gen_widgetId75" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 85; top: 990.283px; left: 431px;">
+<div id="gen_widgetId75" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 84; top: 990.283px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId75" name="gen_inputId75">
 </div>
-<div id="gen_widgetId76" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 86; top: 1009.28px; left: 431px;">
+<div id="gen_widgetId76" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 85; top: 1009.28px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId76" name="gen_inputId76">
 </div>
-<div id="gen_widgetId77" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 87; top: 1027.28px; left: 431px;">
+<div id="gen_widgetId77" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 86; top: 1027.28px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId77" name="gen_inputId77">
 </div>
-<div id="gen_widgetId78" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 90; top: 1046.28px; left: 431px;">
+<div id="gen_widgetId78" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 87; top: 1046.28px; left: 431px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId78" name="gen_inputId78">
+</div>
+<div id="gen_widgetId23" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 193px; height: 16px; position: absolute; z-index: 90; top: 300.667px; left: 630.533px;">
+<input type="text" class="gen_input noborderPrint" oscardb="doctor_ohip_no" id="gen_inputId23" name="gen_inputId23">
 </div>
 </div>
 </div>

@@ -1,0 +1,326 @@
+<html>
+<head>
+<META http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<title>Pulmonary Function Req</title>
+<script src='${oscar_javascript_path}jquery/jquery-2.2.4.min.js'>
+</script>
+<script>window.jQuery || document.write("\x3cscript src='https://code.jquery.com/jquery-2.2.4.min.js'\x3e\x3c\/script\x3e");</script>
+<script src='${oscar_javascript_path}eforms/faxControl.js'>
+</script>
+<style>
+		/* base style for pages */
+		.page_container {
+			position: relative;
+			background: #ffffff;
+			float: left;
+			border: solid 0;
+			margin: 0;
+		}
+
+		/* div containing form input elements */
+		.input_elements {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* base styling for input wrapper divs */
+		.gen-widget {
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			background: transparent;
+			border: 0;
+		}
+
+		/* style wrapped input elements */
+		.gen-widget input, textarea {
+			position: absolute;
+			display: inline-block;
+			text-align: left;
+			font-weight: normal;
+			font-size: 12px;
+			font-family: 'Helvetica', 'Arial', sans-serif;
+			background: transparent;
+			color: #000000;
+			border: 1px solid #d2d2d2;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			margin: 0;
+		}
+
+		/* define xbox styling */
+		.gen-xBox input {
+			background: #f3f3f3;
+			text-align: center;
+			font-weight: bold;
+			font-size: 9px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		.gen-xBox input:focus {
+			outline: none;
+			color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+		/* define custom checkbox styling */
+		.gen-checkbox input {
+			background: #f3f3f3;
+			text-align: center;
+			font-weight: bold;
+			font-size: 9px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		.gen-checkbox input:focus {
+			outline: none;
+			color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+
+		/* define other */
+		.noborder {
+			border-color: transparent !important;
+		}
+
+		/* print only styling */
+		@media print {
+			.DoNotPrint {
+				display: none;
+			}
+
+			.noborderPrint {
+				border-color: transparent !important;
+			}
+
+			.page_container {
+				page-break-after: always;
+			}
+		}
+
+		/* define label styling (only used by generated labels) */
+		.label-style_1 {
+			color: #000000;
+			font-size: 12px;
+			font-weight: normal;
+			font-family: Verdana, Arial, sans-serif;
+		}
+	</style>
+<script>
+		var needToConfirm = false;
+		/** call this to prevent closing the window without a confirmation */
+		function setDirtyFlag() {
+			needToConfirm = true;
+		}
+		/** call this to prevent the exit confirmation popup when closing the window */
+		function releaseDirtyFlag() {
+			needToConfirm = false;
+		}
+		/** call this function on page load to prevent the window from closing
+		 * without confirmation when unsaved changes have been made */
+		function initConfirmClose() {
+			window.addEventListener("beforeunload", function (event) {
+				if (needToConfirm) {
+					var confirmationMessage = "You have attempted to leave this page. " +
+						"If you have made any changes to the fields without clicking the Submit button, " +
+						"your changes will be lost. Are you sure you want to exit this page?";
+					event.returnValue = confirmationMessage;
+					return confirmationMessage;
+				}
+			});
+			$("input").change(function (event) {
+				setDirtyFlag();
+			});
+		}
+		/** this function fixes images paths in the eform to allow image use outside of oscar.
+		 *  This is useful when developing the eform, but can be removed for final versions */
+		function replaceOscarImagePathsWhenLocal($selector) {
+			var strLoc = window.location.href.toLowerCase();
+			if (strLoc.indexOf("https") == -1) {
+				$selector.find("img").not(".signature_data").each(function () {
+					this.src = this.src.replace(/$\%7Boscar_image_path\%7D/, '');
+				});
+			}
+		}
+		/** initializes custom x-box input functionality.
+		 *  should be called once on eform load */
+		function initXBoxes($selector) {
+			$selector.find(".xBox").click(function () {
+				$(this).val($(this).val() === 'X' ? '' : 'X');
+			}).keypress(function (event) {
+				// any key press except tab will constitute a value change to the checkbox
+				if (event.which != 0) {
+					$(this).click();
+					return false;
+				}
+			});
+		}
+		/** initializes custom checkboxes input functionality using utf-8 character.
+		 *  should be called once on eform load */
+		function initUTF8Checkboxes($selector) {
+			$selector.find(".utf8Check").click(function () {
+				$(this).val($(this).val() === '\u2713' ? '' : '\u2713');
+			}).keypress(function (event) {
+				// any key press except tab will constitute a value change to the checkbox
+				if (event.which != 0) {
+					$(this).click();
+					return false;
+				}
+			});
+		}
+		/** pre-check checkboxes and xboxes based on patient gender */
+		function initPrecheckedCheckboxes($selector) {
+			var $patientGender = $("#PatientGender");
+			if ($patientGender) {
+				var filter = ".gender_precheck_" + $patientGender.val();
+				$selector.find("input[type=checkbox]").filter(filter).prop('checked', true);
+				$selector.find(".xBox").filter(filter).val('X');
+				$selector.find(".utf8Check").filter(filter).val('\u2713');
+			}
+		}
+		/** This function is called when the eform has been loaded */
+		function onEformLoad() {
+			var $input_elements = $(".input_elements");
+			replaceOscarImagePathsWhenLocal($("#eform_container"));
+			initXBoxes($input_elements);
+			initUTF8Checkboxes($input_elements);
+			initPrecheckedCheckboxes($input_elements);
+			initConfirmClose();
+		}
+		/** This function is called when the print button is clicked */
+		function onEformPrint() {
+			window.print();
+		}
+		/** This function is called when the eform submit button is clicked */
+		function onEformSubmit() {
+			releaseDirtyFlag();
+			document.forms[0].submit();
+		}
+		/** This function is called when the eform print & submit button is clicked */
+		function onEformPrintSubmit() {
+			onEformPrint();
+			releaseDirtyFlag();
+			setTimeout('document.forms[0].submit()', 2000);
+		}
+	</script>
+</head>
+<body onload='onEformLoad();'>
+<div id='eform_container'style='max-width: 850px'>
+<form id="inputForm" action="">
+<div id="page_1" class="page_container ui-droppable" style="width: 850px; height: 1100px;">
+<img id="gen_backgroundImage1" class="gen-layer1" src="${oscar_image_path}Pulmonary Function Req.png" style="width: 100%; height: auto; z-index: 0;">
+<div class="input_elements">
+<div id="gen_widgetId1" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 109px; height: 16px; position: absolute; z-index: 10; top: 299.167px; left: 566.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="today" id="gen_inputId1" name="gen_inputId1">
+</div>
+<div id="gen_widgetId2" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 296px; height: 16px; position: absolute; z-index: 11; top: 298.167px; left: 170.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="patient_name" id="gen_inputId2" name="gen_inputId2">
+</div>
+<div id="gen_widgetId3" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 105px; height: 16px; position: absolute; z-index: 12; top: 336.167px; left: 218.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="dobc2" id="gen_inputId3" name="gen_inputId3">
+</div>
+<div id="gen_widgetId4" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 152px; height: 16px; position: absolute; z-index: 13; top: 336.167px; left: 525.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="hin" id="gen_inputId4" name="gen_inputId4">
+</div>
+<div id="gen_widgetId5" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 491px; height: 16px; position: absolute; z-index: 14; top: 384.167px; left: 184.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="addressline" id="gen_inputId5" name="gen_inputId5">
+</div>
+<div id="gen_widgetId6" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 501px; height: 16px; position: absolute; z-index: 15; top: 403.167px; left: 174.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="phone" id="gen_inputId6" name="gen_inputId6">
+</div>
+<div id="gen_widgetId7" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 473px; height: 16px; position: absolute; z-index: 16; top: 422.167px; left: 202.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="cell" id="gen_inputId7" name="gen_inputId7">
+</div>
+<div id="gen_widgetId9" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 524px; height: 16px; position: absolute; z-index: 17; top: 441.167px; left: 235.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId9" name="gen_inputId9">
+</div>
+<div id="gen_widgetId10" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 306px; height: 16px; position: absolute; z-index: 18; top: 535.167px; left: 217.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="doctor" id="gen_inputId10" name="gen_inputId10">
+</div>
+<div id="gen_widgetId12" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 352px; height: 16px; position: absolute; z-index: 19; top: 556.167px; left: 171.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="clinic_name" id="gen_inputId12" name="gen_inputId12">
+</div>
+<div id="gen_widgetId13" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 573px; height: 16px; position: absolute; z-index: 20; top: 576.167px; left: 182.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="clinic_addressLine" id="gen_inputId13" name="gen_inputId13">
+</div>
+<div id="gen_widgetId14" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 256px; height: 16px; position: absolute; z-index: 21; top: 594.167px; left: 174.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="clinic_phone" id="gen_inputId14" name="gen_inputId14">
+</div>
+<div id="gen_widgetId15" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 200px; height: 16px; position: absolute; z-index: 22; top: 595.167px; left: 555.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="clinic_fax" id="gen_inputId15" name="gen_inputId15">
+</div>
+<div id="gen_widgetId16" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 23; top: 708.3px; left: 155.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId16" name="gen_inputId16">
+</div>
+<div id="gen_widgetId17" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 24; top: 707.3px; left: 636.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId17" name="gen_inputId17">
+</div>
+<div id="gen_widgetId18" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 25; top: 728.3px; left: 155.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId18" name="gen_inputId18">
+</div>
+<div id="gen_widgetId19" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 26; top: 727.3px; left: 636.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId19" name="gen_inputId19">
+</div>
+<div id="gen_widgetId20" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 27; top: 806.3px; left: 153.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId20" name="gen_inputId20">
+</div>
+<div id="gen_widgetId21" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 28; top: 845.3px; left: 152.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId21" name="gen_inputId21">
+</div>
+<div id="gen_widgetId22" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 98px; height: 16px; position: absolute; z-index: 29; top: 708.567px; left: 657.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId22" name="gen_inputId22">
+</div>
+<div id="gen_widgetId23" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 99px; height: 16px; position: absolute; z-index: 30; top: 727.567px; left: 657.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId23" name="gen_inputId23">
+</div>
+<div id="gen_widgetId24" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 208px; height: 16px; position: absolute; z-index: 31; top: 806.567px; left: 216.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId24" name="gen_inputId24">
+</div>
+<div id="gen_widgetId25" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 118px; height: 16px; position: absolute; z-index: 33; top: 807.567px; left: 608.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId25" name="gen_inputId25">
+</div>
+<div id="gen_widgetId26" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 32; top: 806.3px; left: 586.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId26" name="gen_inputId26">
+</div>
+<div id="gen_widgetId27" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 100px; height: 16px; position: absolute; z-index: 34; top: 845.567px; left: 325.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId27" name="gen_inputId27">
+</div>
+<div id="gen_widgetId28" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 119px; height: 17px; position: absolute; z-index: 35; top: 843.567px; left: 606.4px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId28" name="gen_inputId28">
+</div>
+<div id="gen_widgetId29" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 18px; height: 18px; position: absolute; z-index: 36; top: 844.3px; left: 585.4px;">
+<input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 14px;" id="gen_inputId29" name="gen_inputId29">
+</div>
+<div id="gen_widgetId30" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 141px; height: 16px; position: absolute; z-index: 37; top: 361.167px; left: 180.4px;">
+<input type="text" class="gen_input noborderPrint" oscardb="m$BMI#value" id="gen_inputId30" name="gen_inputId30">
+</div>
+<div id="gen_widgetId8" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 492px; height: 36px; position: absolute; z-index: 38; top: 461.683px; left: 267.533px;">
+<textarea style="resize: none;" class="gen_input noborderPrint" id="gen_inputId8" name="gen_inputId8">
+</textarea>
+</div>
+<div id="gen_widgetId31" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 48px; height: 16px; position: absolute; z-index: 39; top: 336.667px; left: 379.533px;">
+<input type="text" class="gen_input noborderPrint" oscardb="sex" id="gen_inputId31" name="gen_inputId31">
+</div>
+<div id="gen_widgetId11" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 132px; height: 16px; position: absolute; z-index: 42; top: 535.167px; left: 593.533px;">
+<input type="text" class="gen_input noborderPrint" oscardb="doctor_ohip_no" id="gen_inputId11" name="gen_inputId11">
+</div>
+</div>
+</div>
+<div class="DoNotPrint" id="BottomButtons">
+<!-- Form Control Buttons -->
+<label for="subject">Subject:</label>
+<input name="subject" id="subject" size="40" type="text">
+<input value="Submit" name="SubmitButton" id="SubmitButton" type="button" onclick="onEformSubmit();">
+<input value="Print" name="PrintButton" id="PrintButton" type="button" onclick="onEformPrint();">
+<input value="Print &amp; Submit" name="PrintSubmitButton" id="PrintSubmitButton" type="button" onclick="onEformPrintSubmit();">
+<div id="faxControl">
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
