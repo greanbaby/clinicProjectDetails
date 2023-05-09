@@ -190,8 +190,6 @@
 			initUTF8Checkboxes($input_elements);
 			initPrecheckedCheckboxes($input_elements);
 			initConfirmClose();
-			getSignatureID();
-
 		}
 		/** This function is called when the print button is clicked */
 		function onEformPrint() {
@@ -209,33 +207,6 @@
 			setTimeout('document.forms[0].submit()', 2000);
 		}
 	</script>
-<script>
-/** This function will check to see if the current user is a doctor, and if they are it will automatically add their signature if they have one. */
-function getSignatureID() {
-//First check if the current_user is a doctor.
-if (document.getElementById("current_logged_in_user_type") && document.getElementById("current_logged_in_user_type").value == "doctor"){
-var sigid = "../eform/displayImage.do?imagefile=" + "doctor_signature_" + document.getElementById("current_logged_in_user_id").value + ".png";
-checkImage(sigid, function(){document.getElementById("signature").src = sigid;}, function(){console.log("No signature file found.");});
-}
-//If the current_user isn't a doctor, check if there is an appointment provider.
-else if (document.getElementById("appt_provider_id") && document.getElementById("appt_provider_id").value.length >= 1){
-var sigid = "../eform/displayImage.do?imagefile=" + "doctor_signature_" + document.getElementById("appt_provider_id").value + ".png";
-checkImage(sigid, function(){document.getElementById("signature").src = sigid;}, function(){console.log("No signature file found.");});
-}
-//If the current_user isn't a doctor and there is no appointment provider, check if patient has an assigned MRP.
-else if (document.getElementById("doctor_provider_no") && document.getElementById("doctor_provider_no").value.length >= 1 ){
-var sigid = "../eform/displayImage.do?imagefile=" + "doctor_signature_" + document.getElementById("doctor_provider_no").value + ".png";
-checkImage(sigid, function(){document.getElementById("signature").src = sigid;}, function(){console.log("No signature file found.");});
-}
-}
-/** This function will check to see that an image can be loaded and will run the passed through functions in cases of the image loading or encountering an error when loading. */
-function checkImage(imageSrc, onimageloadfunction, onimagenotloadedfunction) {
-var img = new Image();
-img.onload = onimageloadfunction;
-img.onerror = onimagenotloadedfunction;
-img.src = imageSrc;
-}
-</script>
 </head>
 <body onload='onEformLoad();'>
 <div id='eform_container'style='max-width: 850px'>
@@ -347,7 +318,7 @@ img.src = imageSrc;
 <div id="gen_widgetId33" class="gen-widget gen-xBox gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 14px; height: 14px; position: absolute; z-index: 42; top: 882.033px; left: 432px;">
 <input type="text" class="gen_input xBox" autocomplete="off" style="font-size: 11px;" id="gen_inputId33" name="gen_inputId33">
 </div>
-<div id="gen_widgetId34" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 292px; height: 16px; position: absolute; z-index: 62; top: 304.667px; left: 150.533px;">
+<div id="gen_widgetId34" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 292px; height: 16px; position: absolute; z-index: 60; top: 304.667px; left: 150.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="clinic_addressLine" id="gen_inputId34" name="gen_inputId34">
 </div>
 <div id="gen_widgetId35" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 158px; height: 19px; position: absolute; z-index: 43; top: 333.667px; left: 659.533px;">
@@ -400,6 +371,9 @@ img.src = imageSrc;
 </div>
 <div id="gen_widgetId51" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 169px; height: 16px; position: absolute; z-index: 59; top: 284.667px; left: 273.533px;">
 <input type="text" class="gen_input noborderPrint" oscardb="doctorF" id="gen_inputId50" name="gen_inputId50">
+</div>
+<div id="gen_widgetId52" class="gen-widget  gen-layer3 gen-resize-destroyed gen-draggable-destroyed" style="width: 186px; height: 19px; position: absolute; z-index: 63; top: 309.667px; left: 630.533px;">
+<input type="text" class="gen_input noborderPrint" id="gen_inputId51" name="gen_inputId51">
 </div>
 </div>
 </div>
